@@ -1,0 +1,9 @@
+baseURL = "http://ccf-hugo.s3-website-us-east-1.amazonaws.com/"
+languageCode = "en-us"
+title = "CCF Hugo"
+theme = "ananke"
+
+[[deployment.targets]] 
+#An arbitraryname for thistarget. 
+name="awsbucket" 
+URL="s3://ccf-hugo/?region=us-east-1"#yourbuckethere
