@@ -13,8 +13,6 @@ phases:
             - mv hugo /usr/bin/hugo
             - cd -
             - rm -rf /tmp/*
-            - git submodule init
-            - git submodule update
     build:
         commands:
             - rm -rf public
