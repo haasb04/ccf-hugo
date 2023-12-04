@@ -13,12 +13,13 @@ phases:
             - mv hugo /usr/bin/hugo
             - cd -
             - rm -rf /tmp/*
+            - git submodule init
+            - git submodule update
     build:
         commands:
             - rm -rf public
             - hugo
             - hugo deploy
-            #- aws s3 sync public/ s3://ccf-hugo/ --region us-east-1 --delete
     post_build:
         commands:
-        - echo Build completed on `date`
+            - echo Build completed on `date`
